@@ -77,6 +77,8 @@ if __name__ == "__main__":
                 except Exception as e:
                     print("Error occurred:", str(e))
 
+                random_sleep(15, 30)
+
                 try:
                     download_file(link_opinion, os.path.join(
                         folder_path, filename_pdf_opinion), "opinion")
