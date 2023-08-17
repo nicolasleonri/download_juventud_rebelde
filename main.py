@@ -19,15 +19,21 @@ def pdf_to_txt(input_pdf, output_txt):
         print(f"Error occurred: {str(e)}")
 
 
-def download_file(url, local_filename):
+def download_file(url, local_filename, type = "completo"):
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         with open(local_filename, 'wb') as file:
             file.write(response.content)
         print(f"File downloaded as {local_filename}!")
-        filename_txt = str(year) + "_" + str(month).zfill(2) + \
-            "_" + str(day).zfill(2) + ".txt"
+        if type == "completo":
+            filename_txt = str(year) + "_" + str(month).zfill(2) + \
+                "_" + str(day).zfill(2) + ".txt"
+        elif type == "opinion":
+            filename_txt = str(year) + "_" + str(month).zfill(2) + \
+                "_" + str(day).zfill(2) + "_opinion.txt"
+        else:
+            raise Exception("Error, type is missing. Go check download_file() function.") 
         pdf_to_txt(local_filename, os.path.join(folder_path, filename_txt))
     else:
         print(
@@ -45,7 +51,7 @@ def random_sleep(x, y):
 if __name__ == "__main__":
     working_directory = os.path.join(os.getcwd(), 'Data')
 
-    for year in range(2021, 2023):
+    for year in range(2020, 2024):
         for month in range(1, 13):
             folder_path = os.path.join(
                 working_directory, str(year), str(month).zfill(2))
@@ -55,11 +61,15 @@ if __name__ == "__main__":
                 print(f"Folder {folder_path} created!")
 
             for day in range(1, 32):
-                link = "https://www.granma.cu/file/pdf/" + str(year) + "/" + str(month).zfill(2) + "/" + str(
-                    day).zfill(2) + "/" + "G_" + str(year) + str(month).zfill(2) + str(day).zfill(2) + "09.pdf"
-
+                link = "https://www.juventudrebelde.cu/printed/" + str(year) + "/" + str(month).zfill(2) + "/" + str(
+                    day).zfill(2) + "/icompleta.pdf"
                 filename_pdf = str(year) + "_" + str(month).zfill(2) + \
                     "_" + str(day).zfill(2) + ".pdf"
+                
+                link_opinion = "https://www.juventudrebelde.cu/printed/" + str(year) + "/" + str(month).zfill(2) + "/" + str(
+                    day).zfill(2) + "/iopinion.pdf"
+                filename_pdf_opinion = str(year) + "_" + str(month).zfill(2) + \
+                    "_" + str(day).zfill(2) + "_opinion.pdf"
 
                 try:
                     download_file(link, os.path.join(
@@ -67,4 +77,10 @@ if __name__ == "__main__":
                 except Exception as e:
                     print("Error occurred:", str(e))
 
-                random_sleep(10, 30)
+                try:
+                    download_file(link_opinion, os.path.join(
+                        folder_path, filename_pdf_opinion), "opinion")
+                except Exception as e:
+                    print("Error occurred:", str(e))
+
+                random_sleep(15, 30)
