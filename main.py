@@ -3,6 +3,7 @@ import time
 import random
 import requests
 import pdftotext
+import sys
 
 ###### Functions ######
 
@@ -15,8 +16,10 @@ def pdf_to_txt(input_pdf, output_txt):
                 for page in pdf:
                     txt_file.write(page)
         print(f"Text extracted from {input_pdf} and saved to {output_txt}!")
+        sys.stdout.flush()
     except Exception as e:
         print(f"Error occurred: {str(e)}")
+        sys.stdout.flush()
 
 
 def download_file(url, local_filename, type = "completo"):
@@ -49,10 +52,11 @@ def random_sleep(x, y):
 
 
 if __name__ == "__main__":
+    print("TEST")
     working_directory = os.path.join(os.getcwd(), 'Data')
 
-    for year in range(2020, 2024):
-        for month in range(1, 13):
+    for year in range(2023, 2024):
+        for month in range(6, 13):
             folder_path = os.path.join(
                 working_directory, str(year), str(month).zfill(2))
 
@@ -61,6 +65,7 @@ if __name__ == "__main__":
                 print(f"Folder {folder_path} created!")
 
             for day in range(1, 32):
+                sys.stdout.flush()
                 link = "https://www.juventudrebelde.cu/printed/" + str(year) + "/" + str(month).zfill(2) + "/" + str(
                     day).zfill(2) + "/icompleta.pdf"
                 filename_pdf = str(year) + "_" + str(month).zfill(2) + \
@@ -84,5 +89,7 @@ if __name__ == "__main__":
                         folder_path, filename_pdf_opinion), "opinion")
                 except Exception as e:
                     print("Error occurred:", str(e))
+
+                sys.stdout.flush()
 
                 random_sleep(15, 30)
