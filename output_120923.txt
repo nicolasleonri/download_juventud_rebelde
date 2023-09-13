@@ -3974,11 +3974,10 @@ Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Ma
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/16/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc8b2102a70>: Failed to establish a new connection: [Errno 111] Connection refused'))
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/17/icompleta.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc8b2100130>: Failed to establish a new connection: [Errno 111] Connection refused'))
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/17/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc8b2101ff0>: Failed to establish a new connection: [Errno 111] Connection refused'))
-/download_juventud_rebelde/Data/2023/06/2023_06_07.txt!
-File downloaded as /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_07_opinion.pdf!
-Text extracted from /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_07_opinion.pdf and saved to /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_07_opinion.txt!
-File downloaded as /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_08.pdf!
-Text extracted from /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_08.pdf and saved to /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_08.txt!
+File downloaded as /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18.pdf!
+Text extracted from /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18.pdf and saved to /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18.txt!
+Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/18/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc8b2103160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+6/2023_06_08.txt!
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/08/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd224027c70>: Failed to establish a new connection: [Errno 111] Connection refused'))
 File downloaded as /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_09.pdf!
 Text extracted from /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_09.pdf and saved to /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_09.txt!
@@ -4003,3 +4002,8 @@ Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Ma
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/16/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd22408e7d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/17/icompleta.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd22408db40>: Failed to establish a new connection: [Errno 111] Connection refused'))
 Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/17/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd22408d600>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/18/icompleta.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd22408c8e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+File downloaded as /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18_opinion.pdf!
+Text extracted from /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18_opinion.pdf and saved to /mnt/data/download_juventud_rebelde/Data/2023/06/2023_06_18_opinion.txt!
+Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/19/icompleta.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd224027f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Error occurred: HTTPSConnectionPool(host='www.juventudrebelde.cu', port=443): Max retries exceeded with url: /printed/2023/06/19/iopinion.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd22408dba0>: Failed to establish a new connection: [Errno 111] Connection refused'))
