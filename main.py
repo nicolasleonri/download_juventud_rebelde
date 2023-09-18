@@ -52,11 +52,11 @@ def random_sleep(x, y):
 
 
 if __name__ == "__main__":
-    print("TEST")
+
     working_directory = os.path.join(os.getcwd(), 'Data')
 
     for year in range(2023, 2024):
-        for month in range(6, 13):
+        for month in range(7, 10):
             folder_path = os.path.join(
                 working_directory, str(year), str(month).zfill(2))
 
